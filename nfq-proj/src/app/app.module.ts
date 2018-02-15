@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ShopComponent } from './shop.component';
 import { OrdersComponent } from './orders.component';
+import { ProductService } from './product.service';
 
 const APP_ROUTES: Routes = [
   { path: '', component: ShopComponent },
@@ -20,7 +21,7 @@ const APP_ROUTES: Routes = [
     RouterModule.forRoot(APP_ROUTES),
     BrowserModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,11 @@
 <div>
     SHOP
+    <ul>
+        <li *ngFor="let product of products; index as i;">
+            <div>{{product.title}}</div>
+            <div>{{product.price}}</div>
+            <div>{{product.description}}</div>
+            <div>{{product.image}}</div>
+        </li>
+    </ul>
 </div>
