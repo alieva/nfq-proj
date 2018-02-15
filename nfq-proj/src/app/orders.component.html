@@ -1,9 +1,22 @@
 <div>
     ORDERS
-    <ul>
-        <li *ngFor="let order of orders; index as i;">
-            <div>{{order.timestamp | date:'medium'}}</div>
-            <div>{{order.product.title}}</div>
-        </li>
-    </ul>
+    <table>
+        <thead>
+            <td>
+                Time
+            </td>
+            <td>
+                Price
+            </td>
+            <td>
+                Name
+            </td>
+        </thead>
+        <tr *ngFor="let order of orders">
+            <td>{{order.timestamp | date:'medium'}}</td>
+            <td>{{order.product.price}}</td>
+            <td>{{order.product.title}}</td>
+        </tr>
+    </table>
+    <a href="" (click)="clear()">CLEAR</a>
 </div>
