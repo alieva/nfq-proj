@@ -7,7 +7,6 @@ import { ProductService } from './product.service';
     templateUrl: './orders.component.html',
 })
 export class OrdersComponent implements OnInit {
-    title = 'orders';
     orders = [];
 
     constructor(private productService: ProductService) {

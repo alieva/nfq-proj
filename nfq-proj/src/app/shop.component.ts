@@ -7,11 +7,10 @@ import { ProductService } from './product.service';
     templateUrl: './shop.component.html',
 })
 export class ShopComponent implements OnInit {
-    title = 'shop';
     products = [];
+    term: string;
 
     constructor(private productService: ProductService) {
-
     }
 
     ngOnInit() {
