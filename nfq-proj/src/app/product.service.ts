@@ -33,6 +33,30 @@ export class ProductService {
                 image: 'assets/images/iphone7.jpg',
             },
             <ProductModel>{
+                title: 'Galaxy Alpha',
+                description: 'Lorem ipsum',
+                price: 339.99,
+                image: 'assets/images/galaxy-alpha.jpg',
+            },
+            <ProductModel>{
+                title: 'HTC One',
+                description: 'Lorem ipsum',
+                price: 389.99,
+                image: 'assets/images/htc-one.jpg',
+            },
+            <ProductModel>{
+                title: 'LG V30',
+                description: 'Lorem ipsum',
+                price: 289.99,
+                image: 'assets/images/lg-v30.jpg',
+            },
+            <ProductModel>{
+                title: 'Nokia Lumia',
+                description: 'Lorem ipsum',
+                price: 389.99,
+                image: 'assets/images/nokia-lumia.jpg',
+            },
+            <ProductModel>{
                 title: 'Sony Xperia Z3',
                 description: 'sony-xperia-z3',
                 price: 349.99,
