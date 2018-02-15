@@ -15,6 +15,6 @@ export class OrdersComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.orders = this.productService.getOrders();
+        this.orders = this.productService.getOrders().reverse();
     }
 }

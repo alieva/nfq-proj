@@ -1,6 +1,5 @@
 import { ProductModel } from './product.model';
 import { OrderModel } from './order.model';
-// Store to local storage
 
 export class ProductService {
     addOrder(product: ProductModel) {
@@ -15,6 +14,9 @@ export class ProductService {
     getOrders(): OrderModel[] {
         const orders = JSON.parse(localStorage.getItem('orders'));
         return orders;
+    }
+    clearOrders() {
+        localStorage.removeItem('orders');
     }
     getProducts(): ProductModel[] {
         return [

@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { ShopComponent } from './shop.component';
 import { OrdersComponent } from './orders.component';
 import { ProductService } from './product.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 const APP_ROUTES: Routes = [
   { path: '', component: ShopComponent },
@@ -15,11 +17,13 @@ const APP_ROUTES: Routes = [
   declarations: [
     AppComponent,
     ShopComponent,
-    OrdersComponent
+    OrdersComponent,
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),
-    BrowserModule
+    BrowserModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
