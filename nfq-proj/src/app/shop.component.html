@@ -5,7 +5,8 @@
             <div>{{product.title}}</div>
             <div>{{product.price}}</div>
             <div>{{product.description}}</div>
-            <div>{{product.image}}</div>
+            <img [src]="product.image" height="100"/>
+            <a (click)="addToOrders(product)" href="#">BUY</a>
         </li>
     </ul>
 </div>

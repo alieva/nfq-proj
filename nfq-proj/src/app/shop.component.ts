@@ -10,11 +10,15 @@ export class ShopComponent implements OnInit {
     title = 'shop';
     products = [];
 
-    constructor(private productService: ProductService){
+    constructor(private productService: ProductService) {
 
     }
 
     ngOnInit() {
         this.products = this.productService.getProducts();
+    }
+
+    addToOrders(item) {
+        this.productService.addOrder(item);
     }
 }

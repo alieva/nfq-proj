@@ -1,3 +1,9 @@
 <div>
     ORDERS
+    <ul>
+        <li *ngFor="let order of orders; index as i;">
+            <div>{{order.timestamp | date:'medium'}}</div>
+            <div>{{order.product.title}}</div>
+        </li>
+    </ul>
 </div>
