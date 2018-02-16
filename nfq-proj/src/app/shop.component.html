@@ -1,13 +1,13 @@
 <div>
     SHOP
     <input type="text" [(ngModel)]="term">
-    <ul>
-        <li *ngFor="let product of products | filter:term">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of products | filter:term">
             <div>{{product.title}}</div>
             <div>{{product.price}}</div>
             <div>{{product.description}}</div>
             <img [src]="product.image" height="100"/>
-            <a (click)="addToOrders(product)" href="#">BUY</a>
+            <button class="btn btn-outline-warning" (click)="addToOrders(product)" href="#">BUY</button>
         </li>
     </ul>
 </div>

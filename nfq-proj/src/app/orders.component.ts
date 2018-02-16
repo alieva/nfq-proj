@@ -18,6 +18,7 @@ export class OrdersComponent implements OnInit {
     }
 
     clear() {
+        this.orders = [];
         this.productService.clearOrders();
     }
 }
