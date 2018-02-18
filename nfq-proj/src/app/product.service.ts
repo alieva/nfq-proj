@@ -4,15 +4,15 @@ import { OrderModel } from './order.model';
 export class ProductService {
     addOrder(product: ProductModel) {
         let orders: OrderModel[] = this.getOrders();
-        if (orders === null) {
-            orders = [];
-        }
         const order = <OrderModel>{ product: product, timestamp: Date() };
         orders.push(order);
         localStorage.setItem('orders', JSON.stringify(orders));
     }
     getOrders(): OrderModel[] {
-        const orders = JSON.parse(localStorage.getItem('orders'));
+        let orders = JSON.parse(localStorage.getItem('orders'));
+        if (orders === null) {
+            orders = [];
+        }
         return orders;
     }
     clearOrders() {

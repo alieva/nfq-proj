@@ -1,16 +1,15 @@
-<div>
-    ORDERS
+<div *ngIf="orders.length > 0">
     <table class="table">
-        <thead>
-            <td>
+        <thead class="thead-dark">
+            <th>
                 Time
-            </td>
-            <td>
+            </th>
+            <th>
                 Price
-            </td>
-            <td>
+            </th>
+            <th>
                 Name
-            </td>
+            </th>
         </thead>
         <tr *ngFor="let order of orders">
             <td>{{order.timestamp | date:'medium'}}</td>
@@ -19,4 +18,9 @@
         </tr>
     </table>
     <button (click)="clear()" class="btn btn-outline-danger">CLEAR</button>
+</div>
+<div *ngIf="orders.length === 0">
+    <h4>No active orders found, make sure you make some in the
+        <a routerLink="/" routerLinkActive="active" role="button" class="nav-link light">Shop</a>
+    </h4>
 </div>

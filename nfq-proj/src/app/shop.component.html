@@ -1,5 +1,5 @@
+<toaster-container></toaster-container>
 <div>
-
     <div class="search-wrapper">
         <div class="input-group mb-3 search-input">
             <div class="input-group-prepend">
@@ -7,6 +7,9 @@
             </div>
             <input type="text" [(ngModel)]="term" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
         </div>
+    </div>
+    <div *ngIf="term.length != 0">
+        <h5>Results found: {{(products | filter:term).length}}</h5>
     </div>
     <div class="row">
         <div class="col-md-4" *ngFor="let product of products | filter:term">
@@ -16,7 +19,7 @@
                     <h5 class="card-title">{{product.title}}</h5>
                     <h6 class="card-title">{{product.price}}</h6>
                     <p class="card-text">{{product.description}}</p>
-                    <button class="btn btn-outline-warning" (click)="addToOrders(product)">BUY</button>
+                    <button class="btn btn-outline-warning buy-button" (click)="addToOrders(product)">BUY</button>
                 </div>
             </div>
         </div>
