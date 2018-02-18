@@ -1,13 +1,24 @@
 <div>
-    SHOP
-    <input type="text" [(ngModel)]="term">
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let product of products | filter:term">
-            <div>{{product.title}}</div>
-            <div>{{product.price}}</div>
-            <div>{{product.description}}</div>
-            <img [src]="product.image" height="100"/>
-            <button class="btn btn-outline-warning" (click)="addToOrders(product)" href="#">BUY</button>
-        </li>
-    </ul>
+
+    <div class="search-wrapper">
+        <div class="input-group mb-3 search-input">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+            </div>
+            <input type="text" [(ngModel)]="term" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let product of products | filter:term">
+            <div class="card">
+                <div class="card-img-top" [style.backgroundImage]="'url('+ product.image +')'"></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{product.title}}</h5>
+                    <h6 class="card-title">{{product.price}}</h6>
+                    <p class="card-text">{{product.description}}</p>
+                    <button class="btn btn-outline-warning" (click)="addToOrders(product)">BUY</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

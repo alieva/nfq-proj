@@ -1,7 +1,37 @@
-.narmin {
-    color: brown;
-}
-.header {
-    background:azure;
+/*.header {
+    background: red;
     text-align: center;
+}*/
+
+.router-wrapper {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.card-img-top {
+    height: 150px;
+    background-size: cover;
+    width: 200px;
+    margin: auto;
+}
+
+.nav-link {
+    color: azure;
+    font-size: 18px;
+}
+.nav-link:hover {
+    color: #ffc107;
+}
+
+.search-input {
+    max-width: 400px;
+}
+
+.search-wrapper {
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 20px;
 }

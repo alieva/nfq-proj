@@ -61,6 +61,12 @@ export class ProductService {
                 description: 'sony-xperia-z3',
                 price: 349.99,
                 image: 'assets/images/sony-xperia-z3.jpg',
+            },
+            <ProductModel>{
+                title: 'Samsung Galaxy On7 Prime',
+                description: 'Lorem ipsum',
+                price: 629.99,
+                image: 'assets/images/samsung-galaxy-on7.jpg',
             }
         ];
     }
